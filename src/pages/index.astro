@@ -1,0 +1,202 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Image from '~/components/common/Image.astro';
+
+const metadata = {
+  title: 'Mergen AI',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+
+  <!-- ===================== Hero Section ===================== -->
+  <!-- Hero: Introduce Mergen AI with a bold statement and new background image -->
+  <div class="flex flex-row justify-center gap-x-4">
+    <!-- <Image width={450} src="~/assets/images/ualbany.png" alt="Logo" /> -->
+    <Image width={200} src="~/assets/images/logo.png" alt="Logo" />
+  </div>
+
+  <Hero image={{ src: '~/assets/images/lab2.jpeg', alt: 'AI Lab' }}>
+    <Fragment slot="title">
+      <h1
+        class="text-5xl py-3 font-extrabold bg-gradient-to-r from-indigo-400 via-slate-400 to-sky-500 bg-clip-text text-transparent"
+      >
+        Mergen AI
+      </h1>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <p class="text-xl py-3 font-bold text-white">
+        AI Solutions for Professionals
+        <br>
+        Built for Impact
+      </p>
+    </Fragment>
+
+    <Fragment slot="content">
+      <p class="text-md py-5 font-medium text-gray-200">
+        We bring cutting-edge artificial intelligence to everyday workflows,
+        <br> 
+        empowering medical professionals, legal experts, educators, and more.
+      </p>
+    </Fragment>
+  </Hero>
+
+  <!-- ===================== Quick Note / Tagline ===================== -->
+  <Note content="Revolutionize your professional workflow with specialized AI. Built by Mergen AI." />
+
+  <!-- ===================== Mission & Focus ===================== -->
+  <Content
+    isReversed
+    tagline="Our"
+    title="Mission & Focus"
+    items={[
+      {
+        title: 'Problem-Solving AI',
+        description: 'We design and deploy AI-driven tools that address real-world challenges across multiple industries.',
+      },
+      {
+        title: 'Agentic LLM Solutions',
+        description: 'Building agentic, large language model-based systems that adapt and learn from user interactions.',
+      },
+      {
+        title: 'Ethical & Secure',
+        description: 'We prioritize responsible AI, ensuring data privacy, transparency, and regulatory compliance.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/img2.jpg',
+      alt: 'Abstract AI Illustration',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Innovative AI, Real Results
+      </h3>
+      At Mergen AI, our goal is to streamline workflows, inform critical decisions, 
+      and transform how professionals interact with technology.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-indigo-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- ===================== Core Solutions ===================== -->
+  <!-- Highlight your verticals: doctors, dieticians, med students, lawyers, etc. -->
+  <Features
+    tagline="Industry"
+    title="Solutions We Provide"
+    items={[
+      {
+        title: 'AI Claim Report Generator',
+        description: 'Automate insurance claim reporting for medical practices, reducing paperwork for doctors.',
+        icon: 'tabler:clipboard-check',
+      },
+      {
+        title: 'Agentic Chatbots for Dieticians',
+        description: 'Offer intelligent meal planning and patient engagement with personalized AI chatbots.',
+        icon: 'tabler:heart-plus',
+      },
+      {
+        title: 'Personal Education for Med Students',
+        description: 'Deliver adaptive study plans, quizzes, and interactive case studies for medical education.',
+        icon: 'tabler:book',
+      },
+      {
+        title: 'Legal LLM Solutions',
+        description: 'Automate contract drafting, case analysis, and research for law firms and legal professionals.',
+        icon: 'tabler:scale',
+      },
+    ]}
+  />
+
+  <!-- ===================== How We Work / Workflow Steps ===================== -->
+  <Steps
+    title="Our Collaborative Process"
+    image={{
+      src: '~/assets/images/img1.jpeg',
+      alt: 'Workflow illustration',
+    }}
+    items={[
+      {
+        title: 'Consultation & Analysis',
+        description: 'Identify your pain points and scope out the ideal AI-driven solution.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Model Design & Customization',
+        description: 'Build robust, agentic LLM solutions tailored to your domain and data.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Integration & Deployment',
+        description: 'Seamlessly integrate AI into your workflow, ensuring security and compliance.',
+        icon: 'tabler:cloud-upload',
+      },
+      {
+        title: 'Continuous Improvement',
+        description: 'Monitor performance, gather feedback, and optimize for even greater impact over time.',
+        icon: 'tabler:arrow-loop-right',
+      },
+    ]}
+  />
+
+  <!-- ===================== Quick Lab/Company Stats ===================== -->
+  <!-- Feel free to adjust these to reflect your actual metrics or value props -->
+  <Stats
+    title="Mergen AI in Numbers"
+    stats={[
+      { title: 'Industries Served', amount: '4+' },
+      { title: 'Active AI Projects', amount: '10+' },
+      { title: 'Annual Growth', amount: '200%' },
+      { title: 'Users Empowered', amount: '5k+' },
+    ]}
+  />
+
+  <!-- ===================== Team Section (Optional) ===================== -->
+  <!-- Showcase key members or mention an advisory board if desired -->
+  <Features2
+    title="Our Team"
+    subtitle="Meet the dedicated students contributing to our research"
+    items={[
+      {
+        title: 'Furkan Kurt',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/furkan.jpg',
+          alt: 'Photo',
+        },
+      },
+      {
+        title: 'Hakan Otal',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/hakan.jpeg',
+          alt: 'Photo',
+        },
+      },
+      {
+        title: 'Mikail Demir',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/mikail.png',
+          alt: 'Photo',
+        },
+      }
+    ]}
+  />
+
+  <!-- Background styling if needed -->
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+</Layout>

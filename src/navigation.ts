@@ -23,8 +23,8 @@ export const headerData = {
 
 export const footerData = {
   socialLinks: [
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/ai-complex-lab/' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/AI-in-Complex-Systems-Lab' },
-    { ariaLabel: 'Huggingface', icon: 'hf-logo', href: 'https://huggingface.co/AICmpxSysLab' },
+    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/mergenai/' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mergenai' },
+    { ariaLabel: 'Huggingface', icon: 'hf-logo', href: 'https://huggingface.co/mergenai' },
   ],
 };

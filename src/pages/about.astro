@@ -1,8 +1,9 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Image from '~/components/common/Image.astro';
+// import Hero from '~/components/widgets/Hero.astro';
+// import Image from '~/components/common/Image.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
   title: 'AI in Entertainment Day 2025',
@@ -12,13 +13,12 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Logo ******************* -->
-  <div class="flex flex-row justify-center gap-x-4">
-    <!-- <Image width={450} src="~/assets/images/ualbany.png" alt="Logo" /> -->
+  <!-- <div class="flex flex-row justify-center gap-x-4">
     <Image width={300} src="~/assets/images/logo.png" alt="Logo" />
-  </div>
+  </div> -->
 
   <!-- Hero Widget ******************* -->
-  <Hero image={{ src: '~/assets/images/lab.png', alt: 'Lab' }}>
+  <!-- <Hero image={{ src: '~/assets/images/lab.png', alt: 'Lab' }}>
     <Fragment slot="title">
       <h1
         class="text-5xl py-3 font-extrabold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent"
@@ -26,6 +26,7 @@ const metadata = {
         UNDER CONSTRUCTION
       </h1>
     </Fragment>
+  </Hero> -->
 
     <!-- <Fragment slot="subtitle">
     <p class="text-xl py-5 font-bold text-white">
@@ -38,5 +39,44 @@ const metadata = {
       Located at ETEC, University at Albany 1200 Washington Avenue Albany, NY 12226
     </p>
   </Fragment> -->
-  </Hero>
+
+
+  <!-- ===================== Team Section (Optional) ===================== -->
+  <!-- Showcase key members or mention an advisory board if desired -->
+  <Features2
+    title="Our Team"
+    subtitle="Meet the dedicated experts behind our success."
+    items={[
+      {
+        title: 'Furkan Kurt',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/furkan.jpg',
+          alt: 'Photo',
+        },
+      },
+      {
+        title: 'Hakan Otal',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/hakan.jpeg',
+          alt: 'Photo',
+        },
+      },
+      {
+        title: 'Mikail Demir',
+        description: 'Ph.D. Student',
+        image: {
+          src: '~/assets/images/people/mikail.png',
+          alt: 'Photo',
+        },
+      }
+    ]}
+  />
+
+  <!-- Background styling if needed -->
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
+
 </Layout>

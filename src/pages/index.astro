@@ -1,202 +1,461 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Image from '~/components/common/Image.astro';
+import Image from "~/components/common/Image.astro";
+import Layout from "~/layouts/PageLayout.astro";
 
 const metadata = {
-  title: 'Mergen AI',
+  title: "Mergen AI",
   ignoreTitleTemplate: true,
 };
 ---
 
 <Layout metadata={metadata}>
-
   <!-- ===================== Hero Section ===================== -->
-  <!-- Hero: Introduce Mergen AI with a bold statement and new background image -->
-  <div class="flex flex-row justify-center gap-x-4">
-    <!-- <Image width={450} src="~/assets/images/ualbany.png" alt="Logo" /> -->
-    <Image width={200} src="~/assets/images/logo.png" alt="Logo" />
+  <div class="relative bg-slate-900 text-white overflow-hidden">
+    <div class="container mx-auto py-16 px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="text-center md:text-left">
+          <span class="inline-block py-1 text-accent">Innovation Leaders</span>
+          <span class="block text-white"> in AI Research & Development</span>
+          <h1 class="text-4xl md:text-5xl font-bold mt-2 mb-4 pb-2 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+            AI Solutions for Complex Challenges
+          </h1>
+          <p class="text-gray-300 mb-8">
+            Mergen AI delivers cutting-edge artificial intelligence solutions
+            across multiple domains, from healthcare and legal to business
+            intelligence and cybersecurity.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#"
+              class="btn btn-primary px-6 py-3 rounded-md inline-flex items-center justify-center"
+            >
+              AI-Powered Insights
+            </a>
+            <a
+              href="/projects"
+              class="btn bg-transparent border border-white hover:bg-white hover:text-slate-900 px-6 py-3 rounded-md"
+            >
+              Our Projects
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:block">
+          <Image
+            src="~/assets/images/img2.jpg"
+            alt="AI Research Lab"
+            class="rounded-lg shadow-lg mx-auto"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 
-  <Hero image={{ src: '~/assets/images/lab2.jpeg', alt: 'AI Lab' }}>
-    <Fragment slot="title">
-      <h1
-        class="text-5xl py-3 font-extrabold bg-gradient-to-r from-indigo-400 via-slate-400 to-sky-500 bg-clip-text text-transparent"
-      >
-        Mergen AI
-      </h1>
-    </Fragment>
+  <!-- ===================== Logo Section for Credibility ===================== -->
+  <div class="bg-slate-800 py-10">
+    <div class="container mx-auto">
+      <div class="text-center mb-6">
+        <p class="text-sm uppercase tracking-wider text-gray-400">
+          TRUSTED RESEARCH PARTNERS AND CLIENTS ACROSS INDUSTRIES
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-x-12 gap-y-6">
+        <div class="w-28 h-12 flex items-center justify-center">
+          <div
+            class="bg-gray-700 w-[112px] h-[48px] flex items-center justify-center text-gray-300 text-xs rounded"
+          >
+            Healthcare
+          </div>
+        </div>
+        <div class="w-28 h-12 flex items-center justify-center">
+          <div
+            class="bg-gray-700 w-[112px] h-[48px] flex items-center justify-center text-gray-300 text-xs rounded"
+          >
+            Legal Tech
+          </div>
+        </div>
+        <div class="w-28 h-12 flex items-center justify-center">
+          <div
+            class="bg-gray-700 w-[112px] h-[48px] flex items-center justify-center text-gray-300 text-xs rounded"
+          >
+            Finance
+          </div>
+        </div>
+        <div class="w-28 h-12 flex items-center justify-center">
+          <div
+            class="bg-gray-700 w-[112px] h-[48px] flex items-center justify-center text-gray-300 text-xs rounded"
+          >
+            Cybersecurity
+          </div>
+        </div>
+        <div class="w-28 h-12 flex items-center justify-center">
+          <div
+            class="bg-gray-700 w-[112px] h-[48px] flex items-center justify-center text-gray-300 text-xs rounded"
+          >
+            Education
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <Fragment slot="subtitle">
-      <p class="text-xl py-3 font-bold text-white">
-        AI Solutions for Professionals
-        <br>
-        Built for Impact
-      </p>
-    </Fragment>
+  <!-- ===================== Solutions Section ===================== -->
+  <div id="solutions" class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-sm uppercase tracking-wider text-accent mb-2">
+          SOLUTIONS
+        </p>
+        <h2 class="text-3xl font-bold mb-4">Our Domain Expertise</h2>
+        <h3 class="text-2xl">AI-Powered Domain Solutions</h3>
+      </div>
 
-    <Fragment slot="content">
-      <p class="text-md py-5 font-medium text-gray-200">
-        We bring cutting-edge artificial intelligence to everyday workflows,
-        <br> 
-        empowering medical professionals, legal experts, educators, and more.
-      </p>
-    </Fragment>
-  </Hero>
+      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-slate-800 p-6 rounded-lg">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600 rounded-full p-3 mr-4">
+              <span class="text-white text-xl">⚕️</span>
+            </div>
+            <h3 class="text-xl font-bold">Healthcare AI Systems</h3>
+          </div>
+          <p class="text-gray-300">
+            Advanced diagnostic tools, predictive healthcare analytics, and
+            patient care optimization using deep learning and knowledge graphs
+            for improved clinical outcomes.
+          </p>
+        </div>
 
-  <!-- ===================== Quick Note / Tagline ===================== -->
-  <Note content="Revolutionize your professional workflow with specialized AI. Built by Mergen AI." />
+        <div class="bg-slate-800 p-6 rounded-lg">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600 rounded-full p-3 mr-4">
+              <span class="text-white text-xl">⚖️</span>
+            </div>
+            <h3 class="text-xl font-bold">Legal Intelligence Platforms</h3>
+          </div>
+          <p class="text-gray-300">
+            Leveraging NLP and knowledge graphs to transform legal research,
+            contract analysis, case prediction, and compliance monitoring for
+            legal professionals.
+          </p>
+        </div>
 
-  <!-- ===================== Mission & Focus ===================== -->
-  <Content
-    isReversed
-    tagline="Our"
-    title="Mission & Focus"
-    items={[
-      {
-        title: 'Problem-Solving AI',
-        description: 'We design and deploy AI-driven tools that address real-world challenges across multiple industries.',
-      },
-      {
-        title: 'Agentic LLM Solutions',
-        description: 'Building agentic, large language model-based systems that adapt and learn from user interactions.',
-      },
-      {
-        title: 'Ethical & Secure',
-        description: 'We prioritize responsible AI, ensuring data privacy, transparency, and regulatory compliance.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/img2.jpg',
-      alt: 'Abstract AI Illustration',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Innovative AI, Real Results
-      </h3>
-      At Mergen AI, our goal is to streamline workflows, inform critical decisions, 
-      and transform how professionals interact with technology.
-    </Fragment>
+        <div class="bg-slate-800 p-6 rounded-lg">
+          <div class="flex items-start mb-4">
+            <div class="bg-indigo-600 rounded-full p-3 mr-4">
+              <span class="text-white text-xl">📊</span>
+            </div>
+            <h3 class="text-xl font-bold">Business Intelligence Solutions</h3>
+          </div>
+          <p class="text-gray-300">
+            Data-driven decision support systems using predictive modeling,
+            market analysis, and generative AI to identify patterns and
+            opportunities for business growth.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-indigo-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <!-- ===================== Technology Section ===================== -->
+  <div class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-6">
+        <p class="text-sm uppercase tracking-wider text-accent mb-2">
+          TECHNOLOGY
+        </p>
+        <h2 class="text-3xl font-bold mb-8">Cutting-Edge AI Technologies</h2>
+      </div>
 
-  <!-- ===================== Core Solutions ===================== -->
-  <!-- Highlight your verticals: doctors, dieticians, med students, lawyers, etc. -->
-  <Features
-    tagline="Industry"
-    title="Solutions We Provide"
-    items={[
-      {
-        title: 'AI Claim Report Generator',
-        description: 'Automate insurance claim reporting for medical practices, reducing paperwork for doctors.',
-        icon: 'tabler:clipboard-check',
-      },
-      {
-        title: 'Agentic Chatbots for Dieticians',
-        description: 'Offer intelligent meal planning and patient engagement with personalized AI chatbots.',
-        icon: 'tabler:heart-plus',
-      },
-      {
-        title: 'Personal Education for Med Students',
-        description: 'Deliver adaptive study plans, quizzes, and interactive case studies for medical education.',
-        icon: 'tabler:book',
-      },
-      {
-        title: 'Legal LLM Solutions',
-        description: 'Automate contract drafting, case analysis, and research for law firms and legal professionals.',
-        icon: 'tabler:scale',
-      },
-    ]}
-  />
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="order-2 md:order-1">
+          <div class="mb-10">
+            <h3 class="text-2xl font-bold mb-4">Research-Driven Innovation</h3>
+            <p class="text-gray-300 mb-6">
+              Our R&D team works at the intersection of academic research and
+              practical implementation, transforming theoretical advances into
+              real-world AI applications that solve complex business challenges.
+            </p>
+          </div>
 
-  <!-- ===================== How We Work / Workflow Steps ===================== -->
-  <Steps
-    title="Our Collaborative Process"
-    image={{
-      src: '~/assets/images/img1.jpeg',
-      alt: 'Workflow illustration',
-    }}
-    items={[
-      {
-        title: 'Consultation & Analysis',
-        description: 'Identify your pain points and scope out the ideal AI-driven solution.',
-        icon: 'tabler:message-circle',
-      },
-      {
-        title: 'Model Design & Customization',
-        description: 'Build robust, agentic LLM solutions tailored to your domain and data.',
-        icon: 'tabler:code',
-      },
-      {
-        title: 'Integration & Deployment',
-        description: 'Seamlessly integrate AI into your workflow, ensuring security and compliance.',
-        icon: 'tabler:cloud-upload',
-      },
-      {
-        title: 'Continuous Improvement',
-        description: 'Monitor performance, gather feedback, and optimize for even greater impact over time.',
-        icon: 'tabler:arrow-loop-right',
-      },
-    ]}
-  />
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div
+                class="bg-emerald-500 rounded-full h-4 w-6 flex items-center justify-center mt-1 mr-4"
+              >
+                <span class="text-white text-xs">●</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Generative AI</h4>
+                <p class="text-gray-300 text-sm">
+                  State-of-the-art large language models and generative systems
+                  customized for specialized domain-specific applications.
+                </p>
+              </div>
+            </div>
 
-  <!-- ===================== Quick Lab/Company Stats ===================== -->
-  <!-- Feel free to adjust these to reflect your actual metrics or value props -->
-  <Stats
-    title="Mergen AI in Numbers"
-    stats={[
-      { title: 'Industries Served', amount: '4+' },
-      { title: 'Active AI Projects', amount: '10+' },
-      { title: 'Annual Growth', amount: '200%' },
-      { title: 'Users Empowered', amount: '5k+' },
-    ]}
-  />
+            <div class="flex items-start">
+              <div
+                class="bg-emerald-500 rounded-full h-4 w-6 flex items-center justify-center mt-1 mr-4"
+              >
+                <span class="text-white text-xs">●</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Deep Learning</h4>
+                <p class="text-gray-300 text-sm">
+                  Advanced neural network architectures for complex pattern
+                  recognition and predictive modeling across varied data types.
+                </p>
+              </div>
+            </div>
 
-  <!-- ===================== Team Section (Optional) ===================== -->
-  <!-- Showcase key members or mention an advisory board if desired -->
-  <Features2
-    title="Our Team"
-    subtitle="Meet the dedicated students contributing to our research"
-    items={[
-      {
-        title: 'Furkan Kurt',
-        description: 'Ph.D. Student',
-        image: {
-          src: '~/assets/images/people/furkan.jpg',
-          alt: 'Photo',
-        },
-      },
-      {
-        title: 'Hakan Otal',
-        description: 'Ph.D. Student',
-        image: {
-          src: '~/assets/images/people/hakan.jpeg',
-          alt: 'Photo',
-        },
-      },
-      {
-        title: 'Mikail Demir',
-        description: 'Ph.D. Student',
-        image: {
-          src: '~/assets/images/people/mikail.png',
-          alt: 'Photo',
-        },
-      }
-    ]}
-  />
+            <div class="flex items-start">
+              <div
+                class="bg-emerald-500 rounded-full h-4 w-6 flex items-center justify-center mt-1 mr-4"
+              >
+                <span class="text-white text-xs">●</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Graph Networks</h4>
+                <p class="text-gray-300 text-sm">
+                  Relationship-based data modeling enabling sophisticated
+                  analysis of complex connected systems and entity interactions.
+                </p>
+              </div>
+            </div>
 
-  <!-- Background styling if needed -->
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
+            <div class="flex items-start">
+              <div
+                class="bg-emerald-500 rounded-full h-4 w-6 flex items-center justify-center mt-1 mr-4"
+              >
+                <span class="text-white text-xs">●</span>
+              </div>
+              <div>
+                <h4 class="text-lg font-semibold mb-1">Knowledge Graphs</h4>
+                <p class="text-gray-300 text-sm">
+                  Semantic data frameworks that organize information
+                  contextually, enhancing decision support systems with domain
+                  expertise.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 flex justify-center">
+          <Image
+            src="~/assets/images/test2.webp"
+            alt="AI technology"
+            class="rounded-lg max-w-sm w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== Success Stories Section ===================== -->
+  <div class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold mb-2">Client Success Stories</h2>
+        <p class="text-xl text-gray-300">
+          How our AI solutions create transformative results
+        </p>
+        <h3 class="text-2xl font-bold mt-6">Success Stories</h3>
+        <p class="text-gray-300 mt-2">Real-world impact across industries</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div
+          class="bg-slate-800 p-6 rounded-lg border border-slate-700 flex flex-col h-full"
+        >
+          <div class="mb-3">
+            <div
+              class="bg-indigo-600 h-10 w-10 rounded-full mb-3 flex items-center justify-center"
+            >
+              <span class="text-white text-lg">🏥</span>
+            </div>
+            <h3 class="text-lg font-semibold">National Health Institute</h3>
+            <p class="text-sm text-gray-400">Healthcare Sector</p>
+          </div>
+          <div class="text-indigo-400 font-semibold mb-3">
+            43% improvement in diagnostic accuracy
+          </div>
+          <p class="text-gray-300 text-sm mt-auto">
+            "Mergen AI's deep learning models have significantly improved our
+            early disease detection capabilities, leading to better patient
+            outcomes and reduced costs."
+          </p>
+        </div>
+
+        <div
+          class="bg-slate-800 p-6 rounded-lg border border-slate-700 flex flex-col h-full"
+        >
+          <div class="mb-3">
+            <div
+              class="bg-indigo-600 h-10 w-10 rounded-full mb-3 flex items-center justify-center"
+            >
+              <span class="text-white text-lg">📜</span>
+            </div>
+            <h3 class="text-lg font-semibold">Global Legal Partners</h3>
+            <p class="text-sm text-gray-400">Legal Industry</p>
+          </div>
+          <div class="text-indigo-400 font-semibold mb-3">
+            85% reduction in document review time
+          </div>
+          <p class="text-gray-300 text-sm mt-auto">
+            "Their knowledge graph technology revolutionized our approach to
+            case research and contract analysis, allowing our team to focus on
+            high-value strategic work."
+          </p>
+        </div>
+
+        <div
+          class="bg-slate-800 p-6 rounded-lg border border-slate-700 flex flex-col h-full"
+        >
+          <div class="mb-3">
+            <div
+              class="bg-indigo-600 h-10 w-10 rounded-full mb-3 flex items-center justify-center"
+            >
+              <span class="text-white text-lg">🔒</span>
+            </div>
+            <h3 class="text-lg font-semibold">SecureTech Solutions</h3>
+            <p class="text-sm text-gray-400">Cybersecurity</p>
+          </div>
+          <div class="text-indigo-400 font-semibold mb-3">
+            92% accuracy in threat detection
+          </div>
+          <p class="text-gray-300 text-sm mt-auto">
+            "Mergen AI's anomaly detection system has transformed our security
+            operations, identifying sophisticated attacks that traditional
+            systems missed."
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== FAQ Section ===================== -->
+  <div class="bg-slate-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl font-bold mb-2">Frequently Asked Questions</h2>
+        <p class="text-gray-300">Common questions about our AI solutions</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-xl mb-6 opacity-70">FAQ Section</h3>
+        <p class="mb-8 text-gray-300">
+          Find quick helpful answers to your questions.
+        </p>
+
+        <div class="space-y-4">
+          <div class="border-b border-slate-700 pb-4">
+            <div class="flex justify-between items-center cursor-pointer">
+              <h4 class="text-lg font-medium">
+                How does Mergen AI customize solutions for specific industries?
+              </h4>
+              <span class="text-2xl text-indigo-400">+</span>
+            </div>
+            <div class="mt-2 text-gray-300 text-sm">
+              We begin with a thorough assessment of your specific challenges,
+              data landscape, and objectives. Our team then leverages
+              domain-specific expertise combined with our core AI technologies
+              to build tailored solutions that address your unique requirements,
+              integrating with your existing systems and workflows.
+            </div>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <div class="flex justify-between items-center cursor-pointer">
+              <h4 class="text-lg font-medium">
+                What makes your AI approach different from others?
+              </h4>
+              <span class="text-2xl text-indigo-400">+</span>
+            </div>
+            <div class="mt-2 text-gray-300 text-sm">
+              Mergen AI distinguishes itself through a research-first approach,
+              maintaining close ties with academic advancements while focusing
+              on practical implementation. We specialize in combining multiple
+              AI technologies (generative models, knowledge graphs, etc.) to
+              create more powerful, context-aware systems that outperform
+              single-technology solutions.
+            </div>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <div class="flex justify-between items-center cursor-pointer">
+              <h4 class="text-lg font-medium">
+                How do you ensure ethical AI implementation?
+              </h4>
+              <span class="text-2xl text-indigo-400">+</span>
+            </div>
+            <div class="mt-2 text-gray-300 text-sm">
+              Ethics is central to our development process. We employ rigorous
+              testing for bias, maintain transparency in our models, implement
+              strong privacy protections, and establish ongoing monitoring
+              systems. Our solutions include built-in explainability features to
+              ensure users understand how decisions are being made.
+            </div>
+          </div>
+
+          <div class="border-b border-slate-700 pb-4">
+            <div class="flex justify-between items-center cursor-pointer">
+              <h4 class="text-lg font-medium">
+                What level of technical expertise is required to use your
+                solutions?
+              </h4>
+              <span class="text-2xl text-indigo-400">+</span>
+            </div>
+            <div class="mt-2 text-gray-300 text-sm">
+              We design our systems with usability in mind, creating intuitive
+              interfaces that don't require deep technical knowledge. For
+              organizations with varying technical capabilities, we provide
+              comprehensive training and ongoing support to ensure successful
+              adoption and maximum value from our solutions.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== CTA Section ===================== -->
+  <div class="bg-purple-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div class="text-center md:text-left">
+          <h2 class="text-3xl font-bold mb-4">Accelerate Your AI Journey</h2>
+          <p class="text-gray-300 mb-8">
+            Partner with Mergen AI to transform your organization with
+            cutting-edge artificial intelligence solutions tailored to your
+            specific challenges and goals.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+          >
+            <a
+              href="#"
+              class="btn btn-primary bg-indigo-600 hover:bg-indigo-700 px-6 py-3 rounded-md"
+            >
+              Request a Demo
+            </a>
+            <a
+              href="#"
+              class="btn bg-transparent border border-white hover:bg-white hover:text-purple-900 px-6 py-3 rounded-md"
+            >
+              Contact Our Team
+            </a>
+          </div>
+        </div>
+        <div class="hidden md:flex justify-end">
+          <Image
+            src="~/assets/images/img1.jpeg"
+            alt="AI consultation"
+            class="rounded-lg max-w-md w-full"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>

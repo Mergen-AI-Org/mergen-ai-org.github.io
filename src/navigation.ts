@@ -13,18 +13,14 @@ export const headerData = {
     {
       text: 'About Us',
       href: getPermalink('/about'),
-    },
-    {
-      text: 'Contact',
-      href: getPermalink('/contact'),
-    },
+    }
   ],
 };
 
 export const footerData = {
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/mergenai/' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/mergenai' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/Mergen-AI-Org/' },
     { ariaLabel: 'Huggingface', icon: 'hf-logo', href: 'https://huggingface.co/mergenai' },
   ],
 };
